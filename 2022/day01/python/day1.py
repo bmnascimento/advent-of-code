@@ -1,8 +1,8 @@
 with open('DAY1INPUT.txt') as file:
-    gnomes = file.read().split('\n\n')
+    elves = file.read().split('\n\n')
     calories = []
-    for gnome in gnomes:
-        foods = filter(None, gnome.split('\n'))
+    for elf in elves:
+        foods = filter(None, elf.split('\n'))
         calories.append(sum([int(i) for i in foods]))
     calories.sort()
     print("Maior", calories[-1])
