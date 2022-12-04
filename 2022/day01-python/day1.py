@@ -4,4 +4,6 @@ with open('DAY1INPUT.txt') as file:
     for gnome in gnomes:
         foods = filter(None, gnome.split('\n'))
         calories.append(sum([int(i) for i in foods]))
-    print(max(calories))
+    calories.sort()
+    print("Maior", calories[-1])
+    print("Soma", calories[-1] + calories[-2] + calories[-3])
